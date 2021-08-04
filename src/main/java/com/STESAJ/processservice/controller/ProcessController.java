@@ -15,7 +15,7 @@ public class ProcessController {
 
     @Autowired
     private ProcessService processService;
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity<List<Process>> listProcess(){
         List<Process> processes = new ArrayList<>();

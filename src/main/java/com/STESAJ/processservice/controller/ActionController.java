@@ -25,7 +25,7 @@ public class ActionController {
 
     @Autowired
     private ActionService actionService;
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity<List<Action>> listAction(@RequestParam(name = "processId", required = false) Long processId){
         List<Action> actions = new ArrayList<>();
