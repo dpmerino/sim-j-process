@@ -11,11 +11,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/processes")
+@CrossOrigin(origins = "*")
 public class ProcessController {
 
     @Autowired
     private ProcessService processService;
-    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity<List<Process>> listProcess(){
         List<Process> processes = new ArrayList<>();

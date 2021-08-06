@@ -21,11 +21,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping (value = "/actions")
+@CrossOrigin(origins = "*")
 public class ActionController {
 
     @Autowired
     private ActionService actionService;
-    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity<List<Action>> listAction(@RequestParam(name = "processId", required = false) Long processId){
         List<Action> actions = new ArrayList<>();
